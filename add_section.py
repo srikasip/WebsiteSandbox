@@ -18,11 +18,11 @@ def main():
     sectionPath, sectionCSS_path, sectionJS_path = writeSectionPath(section_name)
     
     #write the section files.
-    writeFile(sectionPath, sectionHtml)
-    writeFile(sectionCSS_path, "")
-    writeFile(sectionJS_path, "")
+    a = writeFile(sectionPath, sectionHtml)
+    b = writeFile(sectionCSS_path, "")
+    c = writeFile(sectionJS_path, "")
     
-    if page_name:
+    if page_name and a and b and c:
       sectionString = sectionAccessPoint(section_name)
       pagePath = "static/"+page_name
       with open(pagePath, "r") as myPage:
