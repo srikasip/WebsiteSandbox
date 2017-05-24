@@ -13,11 +13,8 @@ class DynamicHelper:
     if mainPath == "canvas":
       data = "<html><head></head><body>This page is not real</body></html>"
       content_type = "text/html"
-    elif mainPath == "home":
-      data = DynamicHelper.LoadTemplates("static/home.html")
-      content_type = "text/html"
     else:
-      data = DynamicHelper.LoadTemplates("static/home2.html")
+      data = DynamicHelper.LoadTemplates("static/home.html")
       content_type = "text/html"
 
     return data, content_type
