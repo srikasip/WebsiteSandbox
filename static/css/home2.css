@@ -1,0 +1,148 @@
+html, body{
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+  font-family: "Crimson Text", serif;
+}
+
+.scene{
+  height:100vh;
+  width:100vw;
+}
+h1 {
+  display: inline-block;
+  padding: 16px;
+  text-decoration: none;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-size:3.5em;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+div.businessDetails
+{
+  position:absolute;
+  z-index:999;
+  font-size:14pt;
+  font-weight: bolder;
+  bottom:8em;
+  width:480px;
+  left:50%;
+  margin-left:-240px;
+}
+div.address
+{
+  float:left;
+  height:100%;
+}
+div.address span
+{
+
+  display:block;
+  clear:both;
+  float:none;
+  width:100%;
+}
+div.address span:first-child
+{
+  text-align:center;
+}
+div.hours
+{
+  float:right;
+  height:100%;
+  text-align:center;
+}
+table.hours
+{
+  width:100%;
+  border:none;
+  text-align:left;
+}
+table.hours tr td:first-child
+{
+  padding-right:16px;
+  content:"blah";
+}
+table.hours tr td:last-child
+{
+  text-align:right;
+}
+table.hours tr
+{
+  border-bottom: 1px dotted #00cdcd;
+}
+table.hours tr:last-child
+{
+  border:none;
+}
+.carousel-caption
+{
+  top: 12em;
+  bottom: auto;
+  color:#262626;
+  text-shadow:none;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-caption
+  {
+    top:8em;
+  }
+  div.businessDetails{
+    width:80%;
+    left:10%;
+    bottom:3em;
+    margin-left:0px;
+  }
+  div.address{
+    width:48%;
+  }
+  div.hours {
+    width:48%;
+  }
+}
+
+div.footer
+{
+
+}
+
+.overlay
+{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:10;
+  background-color:rgba(240,240,240,0.5);
+  height:100%;
+  width:100%;
+}
+
+#juicerReferral
+{
+  display:none;
+}
+
+#menuOffering
+{
+  height:auto;
+  min-height:auto;
+}
+.scene h1.title
+{
+  text-align: center;
+  display:block;
+}
+.scene:after
+{
+  display: inline-table;
+  content:"";
+  clear:both;
+}

@@ -1,0 +1,146 @@
+div.header
+{
+  box-sizing: border-box;
+  font-family:"Montserrat";
+  color:white;
+  position:fixed;
+  z-index:1000;
+  top:0;
+  left:0;
+  width:100%;
+  text-align: center;
+  background-color:transparent;
+  padding:32px;
+  color:#262626;
+  fill:#262626;
+  -webkit-transition: background-color 2s; /* Safari */
+  transition: background-color 2s;
+}
+div.header.stuckTop
+{
+  background-color:#00cdcd;
+  color:#ffffff;
+  fill:#ffffff;
+  padding-top:16px;
+  padding-bottom:16px;
+}
+div#otherLogo
+{
+  font-family:"Rozha One";
+  float:left;
+  font-size:20pt;
+  -webkit-transition: display 2s; /* Safari */
+  transition: display 2s;
+
+}
+div.header div#otherLogo
+{
+  display:none;
+}
+div.header.stuckTop div#otherLogo
+{
+  display:block;
+}
+div.header.stuckTop #svg_logo
+{
+  display:none;
+}
+
+#svg_logo
+{
+  fill:inherit;
+  height:120px;
+}
+.toppings
+{
+  /*fill:#00cdcd;*/
+  fill:#fff;
+}
+.header span.logo
+{
+  display:block;
+  float:left;
+  font-size:3em;
+  position:absolute;
+  left:1em;
+  top:1em;
+}
+.header div.links
+{
+  position:absolute;
+  right:32px;
+  top:1.75em;
+}
+div.links a{
+  text-decoration: none;
+  color:inherit;
+  font-size:1.5em;
+}
+
+/* 
+Menu Stuff
+*/
+
+.hamburger{
+  background:none;
+  position:absolute;
+  color:inherit;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  color:inherit;
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu_list 
+{
+  z-index:1000000; 
+  font-weight:bold; 
+  font-size:0.8em; 
+  width:10em; 
+  background:#f1f1f1;  
+  position:fixed; 
+  text-align:left; 
+  font-size:12px;
+}
+.menu_bottom .menu_list
+{
+  bottom:5em;
+  right:0;
+}
+.menu_top .menu_list
+{
+  top:5em;
+  right:0;
+}
+.menu_list ul {
+  margin: 0; 
+  padding: 0; 
+  list-style-type: none; 
+  list-style-image: none;
+}
+.menu_list li {display: block;   padding:15px; border-bottom:#dddddd 1px solid;}
+.menu_list li:hover{display: block;    background:#ffffff; padding:15px; border-bottom:#dddddd 1px solid;}
+.menu_list ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu_list ul li a:hover {  color: #666; text-decoration:none;}
+.menu_list a{text-decoration:none; color:#666;}
+.menu_list a:hover{text-decoration:none; color:#666;}
