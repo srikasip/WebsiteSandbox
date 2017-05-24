@@ -27,6 +27,6 @@ class StaticHelper:
       content_type = ""
 
     with open(fileLocation) as myFile:
-      data = myFile.read()
+      data = myFile.read().encode('utf-8').strip()
 
     return data, content_type

@@ -60,7 +60,7 @@ class DynamicHelper:
       svg_block.replaceWith(svg_soup.find("svg"))
 
 
-    dataString = str(pageSoup.prettify()).encode('utf-8').strip()
+    dataString = (pageSoup.prettify()).encode('utf-8').strip()
 
     return dataString
 
