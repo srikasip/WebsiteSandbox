@@ -1,0 +1,10 @@
+#ourstory
+{
+	background-image:url("/static/images/danPhoto.jpg");
+  background-attachment: fixed;
+}
+
+#ourstory .title
+{
+  color:#fff;
+}

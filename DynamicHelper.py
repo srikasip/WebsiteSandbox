@@ -32,7 +32,7 @@ class DynamicHelper:
     #support nested templating.
     while(len(templateBlocks) > 0):
       for block in templateBlocks:
-        url = block.get_text()
+        url = block.get_text().strip()
         url = "static/" + url
         blockSoup = DynamicHelper.getUrlSoup(url)
         

@@ -59,7 +59,7 @@ def writeSectionHtml(sectionName):
   htmlString += '\t\t<script type="application/javascript" src="static/scripts/'+sectionName+'.js"></script>\n'
   htmlString += "\t</head>\n"
   htmlString += "\t<body>\n"
-  htmlString += '\t\t<div class="'+sectionName+' template">\n'
+  htmlString += '\t\t<div class="'+sectionName+' template" id="'+sectionName+'">\n'
   htmlString += '\t\t</div>\n'
   htmlString += "\t</body>\n"
   htmlString += "</html>"
@@ -76,31 +76,4 @@ def sectionAccessPoint(sectionName):
   return xmlString
 
 
-
 if __name__ == "__main__": main()
-
-
-# <html>
-#   <head>
-#     <link rel="stylesheet" type="text/css" href="static/css/header.css"/>
-#     <script type="application/javascript" src="static/scripts/header.js"></script>
-
-#   </head>
-#   <body>
-#     <div class="header template">
-#       <svgtemplate>logo.svg</svgtemplate>
-#       <div id="otherLogo">Da Legna</div>
-#       <button class="hamburger">&#9776;</button>
-#       <button class="cross">&#735;</button>
-#       <div class="menu_list">
-#         <ul>
-#           <a href="#"><li class="menu_item">Menu</li></a>
-#           <a href="#"><li class="menu_item">News</li></a>
-#           <a href="#"><li class="menu_item">Cast</li></a>
-#           <a href="#"><li class="menu_item">Story</li></a>
-#           <a href="#"><li class="menu_item">The Wall</li></a>
-#         </ul>
-#       </div>
-#     </div>
-#   </body>
-# </html>
