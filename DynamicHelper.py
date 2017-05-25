@@ -51,7 +51,7 @@ class DynamicHelper:
     #then to SVGs, which might be invoked in the main file or the template files. shouldn't actually matter, since they are now collapsed into pageSoup.
     svg_blocks = pageSoup.find_all('svgtemplate')
     for svg_block in svg_blocks:
-      url = svg_block.get_text()
+      url = svg_block.get_text().strip()
       url = "static/images/" + url
       svg_soup = DynamicHelper.getUrlSoup(url)
       svg_block.replaceWith(svg_soup.find("svg"))
