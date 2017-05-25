@@ -13,11 +13,8 @@ class DynamicHelper:
     if mainPath == "canvas":
       data = "<html><head></head><body>This page is not real</body></html>"
       content_type = "text/html"
-    elif mainPath == "home":
-      data = DynamicHelper.LoadTemplates("static/home.html")
-      content_type = "text/html"
     else:
-      data = DynamicHelper.LoadTemplates("static/home2.html")
+      data = DynamicHelper.LoadTemplates("static/home.html")
       content_type = "text/html"
 
     return data, content_type
@@ -35,7 +32,7 @@ class DynamicHelper:
     #support nested templating.
     while(len(templateBlocks) > 0):
       for block in templateBlocks:
-        url = block.get_text()
+        url = block.get_text().strip()
         url = "static/" + url
         blockSoup = DynamicHelper.getUrlSoup(url)
         
@@ -54,7 +51,7 @@ class DynamicHelper:
     #then to SVGs, which might be invoked in the main file or the template files. shouldn't actually matter, since they are now collapsed into pageSoup.
     svg_blocks = pageSoup.find_all('svgtemplate')
     for svg_block in svg_blocks:
-      url = svg_block.get_text()
+      url = svg_block.get_text().strip()
       url = "static/images/" + url
       svg_soup = DynamicHelper.getUrlSoup(url)
       svg_block.replaceWith(svg_soup.find("svg"))
